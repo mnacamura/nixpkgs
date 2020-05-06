@@ -25953,6 +25953,10 @@ in
 
   terragrunt = callPackage ../applications/networking/cluster/terragrunt {};
 
+  inherit (callPackage ../applications/misc/themix {})
+  themix-gui
+  themixPlugins;
+
   tilt = callPackage ../applications/networking/cluster/tilt {};
 
   tetex = callPackage ../tools/typesetting/tex/tetex { libpng = libpng12; };
